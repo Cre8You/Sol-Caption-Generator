@@ -1,3 +1,9 @@
+st.title("SOLさん向け キャプション生成ツール")
+
+if st.secrets.get("X_BEARER_TOKEN"):
+    st.success("X_BEARER_TOKEN を読み込めています")
+else:
+    st.error("X_BEARER_TOKEN が見つかりません")
 import streamlit as st
 from typing import Dict, List
 
