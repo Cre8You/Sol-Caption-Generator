@@ -1,3 +1,17 @@
+import os
+from typing import Dict, List, Optional
+
+import requests
+import streamlit as st
+
+st.set_page_config(page_title="SOLさん向け キャプション生成ツール", page_icon="✍️", layout="wide")
+
+# 確認用。終わったら消してOK
+if st.secrets.get("X_BEARER_TOKEN"):
+    st.success("X_BEARER_TOKEN を読み込めています")
+else:
+    st.error("X_BEARER_TOKEN が見つかりません")
+    
 st.title("SOLさん向け キャプション生成ツール")
 
 if st.secrets.get("X_BEARER_TOKEN"):
